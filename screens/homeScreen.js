@@ -73,8 +73,8 @@ const HomeScreen = () => {
         <Image
           source={require('../assets/images/banner.png')}
           style={{
-            width: '50%',
-            height: '50%',
+            width: 300,
+            height: 300,
           }}
         />
       </View>
