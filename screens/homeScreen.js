@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import randomImage from '../assets/images/randomImage';
+import EmptyScreen from '../component/emptyScreen';
+import {useNavigation} from '@react-navigation/native';
 
 const DATA = [
   {
@@ -44,6 +46,7 @@ const DATA = [
 ];
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={{flex: 1}}>
       <View
@@ -88,6 +91,7 @@ const HomeScreen = () => {
           }}>
           <Text style={{fontSize: 20, fontWeight: '600'}}>Recent trip</Text>
           <TouchableOpacity
+            onPress={() => navigation.navigate('addTrip')}
             style={{backgroundColor: 'white', borderRadius: 30, padding: 6}}>
             <Text>Add Trip</Text>
           </TouchableOpacity>
@@ -96,6 +100,9 @@ const HomeScreen = () => {
           <FlatList
             numColumns={2}
             contentContainerStyle={{paddingBottom: 20}}
+            ListEmptyComponent={
+              <EmptyScreen msg="You haven't recorded any trips yet" />
+            }
             data={DATA}
             keyExtractor={item => item.id}
             renderItem={({item}) => {
