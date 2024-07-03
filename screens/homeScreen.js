@@ -108,6 +108,9 @@ const HomeScreen = () => {
             renderItem={({item}) => {
               return (
                 <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate('tripExpensesScreen', {...item})
+                  }
                   style={{
                     justifyContent: 'space-between',
                     marginStart: 26,

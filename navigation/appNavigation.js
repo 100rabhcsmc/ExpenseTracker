@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/homeScreen';
 import LoginScreen from '../screens/loginScreen';
 import AddTrip from '../screens/addTrip';
+import TripExpensesScreen from '../screens/tripExpensesScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,11 @@ const AppNavigation = () => {
           options={{headerShown: false}}
           name="addTrip"
           component={AddTrip}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="tripExpensesScreen"
+          component={TripExpensesScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

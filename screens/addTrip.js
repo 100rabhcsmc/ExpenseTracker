@@ -10,8 +10,8 @@ import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
 const AddTrip = () => {
-  const [place, setplace] = useState('');
-  const [country, setcountry] = useState('');
+  const [place, setPlace] = useState('');
+  const [country, setCountry] = useState('');
   const navigation = useNavigation();
 
   const handleAddTrip = () => {
@@ -49,7 +49,7 @@ const AddTrip = () => {
         </Text>
         <TextInput
           value={place}
-          onChange={value => setplace(value)}
+          onChange={value => setPlace(value)}
           style={{
             padding: 20,
             margin: 20,
@@ -63,7 +63,7 @@ const AddTrip = () => {
         </Text>
         <TextInput
           value={country}
-          onChange={value => setcountry(value)}
+          onChange={value => setCountry(value)}
           style={{
             padding: 20,
             margin: 20,
