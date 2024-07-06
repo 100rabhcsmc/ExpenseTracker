@@ -84,7 +84,7 @@ const TripExpensesScreen = props => {
           }}>
           <Text style={{fontSize: 20, fontWeight: '600'}}>Expenses</Text>
           <TouchableOpacity
-            onPress={() => navigation.navigate('addTrip')}
+            onPress={() => navigation.navigate('AddExpensesScreen')}
             style={{backgroundColor: 'white', borderRadius: 30, padding: 6}}>
             <Text>Add Expens</Text>
           </TouchableOpacity>
